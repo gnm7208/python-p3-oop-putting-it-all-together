@@ -6,10 +6,11 @@ class Book:
         self.page_count = page_count
 
     def page_count(self):
-        try:
-            self.page_count = int(self.page_count)
-        except ValueError:
-            print("page_count must be an integer")
+        if not isinstance(self.page_count, int):
+            print("page count must be an integer")
+        else:
+            self.page_count = self.page_count
+    
 
     def turn_page(self):
         print("Flipping the page...wow, you read fast!")
