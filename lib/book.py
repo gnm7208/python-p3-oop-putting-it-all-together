@@ -2,8 +2,8 @@
 
 class Book:
     def __init__(self,title,page_count):
-        self.title = None
-        self.page_count = None
+        self.title = title
+        self.page_count = page_count
 
     def page_count(self):
         try:
