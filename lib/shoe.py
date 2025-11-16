@@ -13,8 +13,12 @@ class Shoe:
             self.size = self.size
     
     def cobble(self):
-        print("Your shoe is as good as new!")
-        self.condition = "New"
-        return self.condition
-    
+        if self.condition != "New":
+            self.condition = "New"
+            print("Your shoe is as good as new!")
+        else:
+            print("Your shoe is already new!")
+
+    def __str__(self):
+        return f"This is a {self.brand} shoe of size {self.size} and condition {self.condition}"
     pass
